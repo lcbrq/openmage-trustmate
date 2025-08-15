@@ -1,0 +1,4 @@
+app/code/community/LCB/TrustMate
+app/design/frontend/base/default/layout/lcb_trustmate.xml
+app/design/frontend/base/default/template/lcb/trustmate
+app/etc/modules/LCB_TrustMate.xml

@@ -1,0 +1,32 @@
+<?php
+/**
+ * @var LCB_TrustMate_Block_Checkout_Onepage_Success $this
+ */
+$order = $this->getOrder();
+if (!$order) {
+    return;
+}
+?>
+
+<script>
+TRUST_MATE_USER_NAME = '<?= $order->getCustomerFirstname(); ?>';
+TRUST_MATE_USER_EMAIL = '<?= $order->getCustomerEmail(); ?>';
+TRUST_MATE_ORDER_NUMBER = '<?= $order->getIncrementId(); ?>';
+TRUST_MATE_COMPANY_UUID = '<?= $this->getCompanyUuid() ?>';
+TRUSTMATE_PRODUCTS = [
+<?php foreach($order->getAllVisibleItems() as $item):
+if (!$product = $item->getProduct()) {
+    continue;
+}
+?>
+{
+local_id: '<?= $item->getSku() ?>',
+name: '<?= $item->getName() ?>',
+product_url: '<?= $product->getProductUrl() ?>',
+image_url: '<?= $product->getImageUrl() ?>',
+},
+<?php endforeach ?>
+];
+</script>
+
+<script type="text/javascript" src='https://trustmate.io/api/invitation/script'></script>

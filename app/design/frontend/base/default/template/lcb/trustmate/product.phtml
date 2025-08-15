@@ -1,0 +1,13 @@
+<?php
+/**
+ * @var LCB_TrustMate_Block_Catalog_Product_View $this
+ */
+$product = $this->getProduct();
+$widgetId = $this->getWidgetId();
+if (!$product || !$widgetId) {
+    return;
+}
+?>
+
+<div id="<?= $widgetId ?>"></div>
+<script defer src="https://trustmate.io/widget/api/<?= $widgetId ?>/script?product=<?= $product->getSku() ?>"></script>

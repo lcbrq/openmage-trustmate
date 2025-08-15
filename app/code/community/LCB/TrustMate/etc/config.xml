@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<config>
+    <modules>
+        <LCB_TrustMate>
+            <version>1.0.0</version>
+        </LCB_TrustMate>
+    </modules>
+    <global>
+        <blocks>
+            <lcb_trustmate>
+                <class>LCB_TrustMate_Block</class>
+            </lcb_trustmate>
+        </blocks>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <lcb_trustmate>
+                    <file>lcb_trustmate.xml</file>
+                </lcb_trustmate>
+            </updates>
+        </layout>
+    </frontend>
+</config>

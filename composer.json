@@ -1,0 +1,9 @@
+{
+    "name": "lcbrq/openmage-trustmate",
+    "license": ["MIT"],
+    "type": "openmage-module",
+    "description": "Simple TrustMate integration for OpenMage.",
+    "extra": {
+        "magento-root-dir": "test/"
+    }
+}
